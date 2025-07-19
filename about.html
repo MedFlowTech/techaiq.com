@@ -2,80 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About TechAIQ - Empowering innovation through technology and AI" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | TechAIQ</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9fb;
-      color: #222;
+      background-color: #f4f6f8;
+      color: #333;
     }
+
     header {
-      background-color: #0b0c10;
-      color: blue;
-      padding: 1rem 2rem;
-      text-align: center;
+      background-color: #1e1e2f;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+
+    header img {
+      height: 60px;
+    }
+
     nav a {
-      color: #66fcf1;
-      margin: 0 1rem;
+      margin-left: 20px;
       text-decoration: none;
-      font-weight: bold;
+      color: #fff;
+      font-weight: 500;
     }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
+
+    nav a:hover {
+      color: #00bcd4;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      color: #1e1e2f;
+    }
+
+    .about-hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .about-hero img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .welcome-text {
+      margin-top: 40px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .welcome-text p {
+      line-height: 1.7;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    footer {
+      background-color: #1e1e2f;
+      color: #fff;
       text-align: center;
+      padding: 15px;
+      margin-top: 60px;
     }
-    p {
-      line-height: 1.6;
+
+    footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .about-hero {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="images/logo.png" alt="TechAIQ Logo" width="120" />    
-    <h1>TechAIQ</h1>
+    <a href="index.html"><img src="images/logo.png" alt="TechAIQ Logo"></a>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="container">
-    <h1>About TechAIQ</h1>
-    <p>
-      Welcome to <strong>TechAIQ</strong> — where technology meets intelligence.
-    </p>
-    <p>
-      Founded by Olamilekan Emmanuel Yusuf, TechAIQ is more than just a tech brand — it's a movement. We are passionate about building intelligent solutions that solve real-world problems using technology, artificial intelligence, and innovation.
-    <p>TechAIQ is a passionate, innovative hub where technology meets intelligence. We're building bold solutions powered by AI and driven by real-world needs.</p>
-    <p>We focus on web development, automation, data tools, and powerful business apps. We believe in making tech simple, smart, and useful.</p>
-    </p>
-    <p>
-      From crafting user-friendly websites to exploring the limitless potential of AI, TechAIQ is your partner for smart solutions. We empower businesses, startups, and visionaries with tools that make an impact.
-    </p>
-    <p>
-      Our mission is simple: <em>“Transforming lives through intelligent technologies.”</em>
-    </p>
-    <p>
-      Whether you're looking for a stunning online presence, a smart business solution, or collaboration on a future-forward idea — TechAIQ is ready.
-    </p>
-  </div>
+  <main>
+    <div class="about-hero">
+      <img src="my-photo.jpg" alt="Olamilekan Yusuf">
+      <div class="about-text">
+        <h1>About TechAIQ</h1>
+        <p>TechAIQ is led by Olamilekan Yusuf — a passionate innovator who believes in simplifying life with technology. With roots in healthcare, biomedical science, and now diving deep into web & AI technologies, TechAIQ exists to solve problems creatively and efficiently.</p>
+        <p>We build smart digital tools and websites, and we’re working towards AI-driven apps for the future. We believe in delivering quality work that empowers businesses and communities.</p>
+      </div>
+    </div>
 
-  <footer style="text-align: center; padding: 2rem 0; font-size: 0.9rem; background-color: #0b0c10; color: white;">
-    &copy; 2025 TechAIQ. All rights reserved.
+    <div class="welcome-text">
+      <p><strong>Welcome to TechAIQ — where technology meets intelligence.</strong></p>
+      <p>Founded by Olamilekan Emmanuel Yusuf, TechAIQ is more than just a tech brand — it's a movement. We are passionate about building intelligent solutions that solve real-world problems using technology, artificial intelligence, and innovation.</p>
+      <p>TechAIQ is a passionate, innovative hub where technology meets intelligence. We're building bold solutions powered by AI and driven by real-world needs.</p>
+      <p>We focus on web development, automation, data tools, and powerful business apps. We believe in making tech simple, smart, and useful.</p>
+      <p>From crafting user-friendly websites to exploring the limitless potential of AI, TechAIQ is your partner for smart solutions. We empower businesses, startups, and visionaries with tools that make an impact.</p>
+      <p><strong>Our mission is simple:</strong> “Transforming lives through intelligent technologies.”</p>
+      <p>Whether you're looking for a stunning online presence, a smart business solution, or collaboration on a future-forward idea — TechAIQ is ready.</p>
+    </div>
+
+    <section>
+      <h2>What We Do</h2>
+      <ul>
+        <li>⚡ Web Design & Development</li>
+        <li>🤖 AI Concepts & Tools</li>
+        <li>📊 Data Analysis</li>
+        <li>🔬 Medical & Scientific Software Projects</li>
+        <li>💡 Smart Solutions for Businesses</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Connect with Us</h2>
+      <p>Email: <a href="mailto:hello@techaiq.com">hello@techaiq.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 TechAIQ. Built with ❤️ by Olamilekan Yusuf.
   </footer>
+
 </body>
 </html>
