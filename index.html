@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-213523576"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-213523576');
-</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | TechAIQ – Smart AI & Automation Tools</title>
-  <meta name="description" content="TechAIQ builds AI tools, automation, web apps & more to help businesses innovate.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://techaiq.com/">
-  <link rel="icon" href="assets/favicon.ico">
-
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="TechAIQ – Smart AI & Automation Tools">
-  <meta property="og:description" content="Building intelligent solutions that transform businesses with AI, automation & web apps.">
-  <meta property="og:image" content="https://techaiq.com/assets/logo.png">
-  <meta property="og:url" content="https://techaiq.com/">
-  <meta property="og:type" content="website">
+  <title>Home | TechAIQ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">TechAIQ</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">TechAIQ</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to <span class="highlight">TechAIQ</span></h1>
-    <p>Smart Tech, Bold Ideas. We design innovative AI & automation tools that transform businesses.</p>
-    <a href="projects.html" class="btn">Explore Our Work</a>
+  <section class="hero fade-in">
+    <h1>Welcome to TechAIQ</h1>
+    <p>Smart tech solutions with AI, automation & innovation.</p>
+    <a href="projects.html" class="btn">Explore Projects</a>
   </section>
 
-  <footer>
+  <section class="card-grid fade-in" style="transition-delay:0.4s;">
+    <div class="card"><h3>Web Development</h3><p>Responsive, modern web solutions for SMEs.</p></div>
+    <div class="card"><h3>AI Integrations</h3><p>Chatbots, data pipelines, and intelligent automation.</p></div>
+    <div class="card"><h3>HealthTech Tools</h3><p>Bloodbank, diagnostics, genomics – real-world impact.</p></div>
+  </section>
+
+  <footer class="fade-in" style="transition-delay:0.8s; text-align:center; padding:2rem; color:#555;">
     <p>&copy; 2025 TechAIQ. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 </body>
 </html>
