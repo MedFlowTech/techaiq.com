@@ -1,82 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-213523576"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-213523576');
-</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | TechAIQ – Smart AI & Automation Tools</title>
-  <meta name="description" content="TechAIQ builds AI tools, automation, web apps & more to help businesses innovate.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://techaiq.com/">
-  <link rel="icon" href="assets/favicon.ico">
-
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="TechAIQ – Smart AI & Automation Tools">
-  <meta property="og:description" content="Building intelligent solutions that transform businesses with AI, automation & web apps.">
-  <meta property="og:image" content="https://techaiq.com/assets/logo.png">
-  <meta property="og:url" content="https://techaiq.com/">
-  <meta property="og:type" content="website">
+  <title>Contact | TechAIQ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">TechAIQ</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">TechAIQ</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
-  <section class="contact">
-    <h1>📬 Contact Us</h1>
-    <p>Have a question, project idea, or need support? Reach out using the form below!</p>
-
-    <form id="contact-form" action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
-  <label for="name">Your Name</label>
-  <input type="text" id="name" name="name" required />
-
-  <label for="email">Your Email</label>
-  <input type="email" id="email" name="_replyto" required />
-
-  <label for="message">Your Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
-
-  <!-- Optional hidden subject -->
-  <input type="hidden" name="_subject" value="New message from TechAIQ site" />
-
-  <button type="submit">Send Message</button>
-</form>
+  <section class="hero fade-in">
+    <h1>📬Contact Us</h1>
+    <p>Have questions? Want to collaborate? Let’s talk.</p>
   </section>
 
-  <footer>
+  <main class="fade-in" style="transition-delay:0.4s; padding:40px;">
+    <form action="https://formspree.io/f/xjkogodl" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="_replyto" required>
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <input type="hidden" name="_subject" value="New message from TechAIQ site">
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="fade-in" style="transition-delay:0.8s; text-align:center; padding:2rem; color:#555;">
     <p>&copy; 2025 TechAIQ. All rights reserved.</p>
   </footer>
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  fetch(this.action, {
-    method: 'POST',
-    body: new FormData(this),
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    this.reset();
-    alert('Thank you! Your message has been sent.');
-  }).catch(err => {
-    alert('Oops! There was a problem sending your message.');
-  });
-});
-</script>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(f => observer.observe(f));
+  </script>
 </body>
 </html>

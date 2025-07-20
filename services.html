@@ -1,83 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-213523576"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-213523576');
-</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | TechAIQ – Smart AI & Automation Tools</title>
-  <meta name="description" content="TechAIQ builds AI tools, automation, web apps & more to help businesses innovate.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://techaiq.com/">
-  <link rel="icon" href="assets/favicon.ico">
-
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="TechAIQ – Smart AI & Automation Tools">
-  <meta property="og:description" content="Building intelligent solutions that transform businesses with AI, automation & web apps.">
-  <meta property="og:image" content="https://techaiq.com/assets/logo.png">
-  <meta property="og:url" content="https://techaiq.com/">
-  <meta property="og:type" content="website">
+  <title>Services | TechAIQ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">TechAIQ</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">TechAIQ</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
-  <section class="services">
-    <h1>💼 Our Services</h1>
-    <div class="services-container">
-
-      <div class="service-card">
-        <h2>🌐 Web Development</h2>
-        <p>We design and develop responsive websites and dashboards for startups and SMEs using modern tech stacks like React, Django, Node.js and WordPress.</p>
-      </div>
-
-      <div class="service-card">
-        <h2>🤖 AI Integrations</h2>
-        <p>Implementing OpenAI-powered bots, chat assistants, intelligent document search, and AI tools tailored to your business workflow.</p>
-      </div>
-
-      <div class="service-card">
-        <h2>⚙️ Business Process Automation</h2>
-        <p>We automate repetitive tasks using Python, Power Automate, and Zapier — boosting team productivity and speed.</p>
-      </div>
-
-      <div class="service-card">
-        <h2>📊 Business Applications</h2>
-        <p>From invoicing systems to CRMs and analytics dashboards, we build cloud-based tools to streamline your operations.</p>
-      </div>
-
-      <div class="service-card">
-        <h2>🧪 HealthTech Solutions</h2>
-        <p>Custom digital tools and dashboards for laboratories, clinics, and hospitals — integrated with LIS, HL7, or FHIR standards.</p>
-      </div>
-
-      <div class="service-card">
-        <h2>📱 Mobile App Development</h2>
-        <p>Cross-platform mobile apps for Android/iOS using Flutter and React Native — from MVP to full deployment.</p>
-      </div>
-
-    </div>
+  <section class="hero fade-in">
+    <h1>💼Our Services</h1>
+    <p>Smart solutions in web, AI, automation, and healthtech tools.</p>
   </section>
 
-  <footer>
+  <main class="card-grid fade-in" style="transition-delay:0.4s;">
+    <div class="card"><h3>🌐Web Development</h3><p>We design and develop responsive websites and dashboards for startups and SMEs using modern tech stacks like React, Django, Node.js and WordPress.</p></div>
+    <div class="card"><h3>🤖AI Integrations</h3><p>Chatbots, automation scripts, data pipelines. We Implement OpenAI-powered bots, chat assistants, intelligent document search, and AI tools tailored to your business workflow.</p></div>
+    <div class="card"><h3>⚙️Automation Tools</h3><p>Workflows using Zapier, Python, scripts.</p></div>
+    <div class="card"><h3>📊Business Apps</h3><p>From invoicing systems to CRMs and analytics dashboards, we build cloud-based tools to streamline your operations.</p></div>
+    <div class="card"><h3>🧪HealthTech Solutions</h3><p>Custom digital tools and dashboards for laboratories, clinics, and hospitals — integrated with LIS, HL7, or FHIR standards, secure systems.</p></div>
+    <div class="card"><h3>📱Mobile Apps</h3><p>Cross-platform mobile apps for Android/iOS using Flutter and React Native — from MVP to full deployment.</p></div>
+  </main>
+
+  <footer class="fade-in" style="transition-delay:0.8s; text-align:center; padding:2rem; color:#555;">
     <p>&copy; 2025 TechAIQ. All rights reserved.</p>
   </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(f => observer.observe(f));
+  </script>
 </body>
 </html>

@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-213523576"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-213523576');
-</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | TechAIQ – Smart AI & Automation Tools</title>
-  <meta name="description" content="TechAIQ builds AI tools, automation, web apps & more to help businesses innovate.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://techaiq.com/">
-  <link rel="icon" href="assets/favicon.ico">
-
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="TechAIQ – Smart AI & Automation Tools">
-  <meta property="og:description" content="Building intelligent solutions that transform businesses with AI, automation & web apps.">
-  <meta property="og:image" content="https://techaiq.com/assets/logo.png">
-  <meta property="og:url" content="https://techaiq.com/">
-  <meta property="og:type" content="website">
+  <title>About | TechAIQ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">TechAIQ</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">TechAIQ</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
-  <section class="about">
-    <h1>About Us</h1>
-    <p>
-      <strong>TechAIQ</strong> is a forward-thinking technology company focused on building intelligent automation tools,
-      web-based platforms, and AI-driven solutions for modern businesses. Founded with a mission to simplify and elevate digital transformation,
-      TechAIQ serves clients across multiple industries.
-    </p>
-
-    <h2>💡 Our Vision</h2>
-    <p>
-      To become Africa’s leading AI innovation hub, making everyday tech smarter, faster, and more human-centric.
-    </p>
-
-    <h2>🧑🏽‍💻 Meet the Founder</h2>
-    <p>
-      <strong>Olamilekan Emmanuel Yusuf</strong> is a Biomedical Scientist turned techpreneur, passionate about automation, innovation, and impact.
-    </p>
+  <section class="hero fade-in">
+    <h1>About TechAIQ</h1>
+    <p>Where technology meets intelligence. Founded by Olamilekan Emmanuel Yusuf.</p>
   </section>
 
-  <footer>
+  <main class="fade-in" style="transition-delay:0.4s; padding:40px;">
+    <p>Welcome to TechAIQ — where technology meets intelligence.</p>
+    <p>Founded by Olamilekan Emmanuel Yusuf, TechAIQ is more than just a tech brand — it's a movement. We are passionate about building intelligent solutions that solve real-world problems using technology, artificial intelligence, and innovation.</p>
+    <p>TechAIQ is a passionate, innovative hub where technology meets intelligence. We're building bold solutions powered by AI and driven by real-world needs.</p>
+    <p>We focus on web development, automation, data tools, and powerful business apps. We believe in making tech simple, smart, and useful.</p>
+    <p>From crafting user-friendly websites to exploring the limitless potential of AI, TechAIQ is your partner for smart solutions. We empower businesses, startups, and visionaries with tools that make an impact.</p>
+    <p>Our mission is simple: “Transforming lives through intelligent technologies.”</p>
+    <p>Whether you're looking for a stunning online presence, a smart business solution, or collaboration on a future-forward idea — TechAIQ is ready.</p>
+  </main>
+
+  <footer class="fade-in" style="transition-delay:0.8s; text-align:center; padding:2rem; color:#555;">
     <p>&copy; 2025 TechAIQ. All rights reserved.</p>
   </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(f => observer.observe(f));
+  </script>
 </body>
 </html>

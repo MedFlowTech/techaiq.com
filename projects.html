@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-213523576"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-213523576');
-</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | TechAIQ – Smart AI & Automation Tools</title>
-  <meta name="description" content="TechAIQ builds AI tools, automation, web apps & more to help businesses innovate.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://techaiq.com/">
-  <link rel="icon" href="assets/favicon.ico">
-
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="TechAIQ – Smart AI & Automation Tools">
-  <meta property="og:description" content="Building intelligent solutions that transform businesses with AI, automation & web apps.">
-  <meta property="og:image" content="https://techaiq.com/assets/logo.png">
-  <meta property="og:url" content="https://techaiq.com/">
-  <meta property="og:type" content="website">
+  <title>Projects | TechAIQ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">TechAIQ</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">TechAIQ</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
     </nav>
   </header>
 
-  <section class="projects">
-    <h1>🚧 Our Projects</h1>
-    <div class="project-card">
-      <h2>AutoLab: Healthcare Automation</h2>
-      <p>Designed a workflow automation tool for clinical laboratories, reducing manual entry errors by 75% and speeding up reporting time.</p>
-      <a href="#">Learn More</a>
-    </div>
-
-    <div class="project-card">
-      <h2>WebAI Bot: Customer Service Assistant</h2>
-      <p>A trained AI chatbot deployed for SMEs to manage customer support 24/7 via websites and WhatsApp integration.</p>
-      <a href="#">Learn More</a>
-    </div>
-
-    <div class="project-card">
-      <h2>TechIQ Hub: Web-Based Learning Platform</h2>
-      <p>Built a modern web portal for training young Africans in AI, coding, and automation using Django + Vue.js.</p>
-      <a href="#">Learn More</a>
-    </div>
-
-    <div class="project-card">
-      <h2>SmartInvoice SaaS</h2>
-      <p>Created a cloud-based invoicing app for small businesses with AI-based expense tracking and analytics dashboard.</p>
-      <a href="#">Learn More</a>
-    </div>
+  <section class="hero fade-in">
+    <h1>🚧Our Projects</h1>
+    <p>Explore key solutions — from AI in healthtech to web apps.</p>
   </section>
 
-  <footer>
+  <main class="card-grid fade-in" style="transition-delay:0.4s;">
+    <div class="card">
+      <h3>AutoLab: Healthcare Automation</h3>
+      <p>Designed a workflow automation tool for clinical laboratories, reducing manual entry errors by 75% and speeding up reporting time.</p>
+    </div>
+    <div class="card">
+      <h3>AutoLab: Healthcare Automation</h3>
+      <p>Designed a workflow automation tool for clinical laboratories, reducing manual entry errors by 75% and speeding up reporting time.</p>
+    </div>
+    <div class="card">
+      <h3>AutoLab: Healthcare Automation</h3>
+      <p>Designed a workflow automation tool for clinical laboratories, reducing manual entry errors by 75% and speeding up reporting time.</p>
+    </div>
+    <div class="card">
+      <h3>TechIQ Hub: Web-Based Learning Platform</h3>
+      <p>Built a modern web portal for training young Africans in AI, coding, and automation using Django + Vue.js.</p>
+    </div>
+    <div class="card">
+      <h3>WebAI Bot: Customer Service Assistant</h3>
+      <p>A trained AI chatbot deployed for SMEs to manage customer support 24/7 via websites and WhatsApp integration.</p>
+    </div>
+    <div class="card">
+      <h3>SmartInvoice SaaS</h3>
+      <p>Cloud invoicing app launched for SME clients businesses with AI-based expense tracking and analytics dashboard.</p>
+    </div>
+  </main>
+
+  <footer class="fade-in" style="transition-delay:0.8s; text-align:center; padding:2rem; color:#555;">
     <p>&copy; 2025 TechAIQ. All rights reserved.</p>
   </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(f => observer.observe(f));
+  </script>
 </body>
 </html>
